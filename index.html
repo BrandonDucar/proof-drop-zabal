@@ -3,36 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proof Drop for ZABAL Gamez</title>
+    <title>Proof Drop - Build Receipt Kit</title>
     <meta
       name="description"
-      content="Create a ZABAL Gamez build receipt, hash your POIDH proof photo locally, and leave with a ready claim kit."
+      content="Create a portable build receipt, hash a proof photo locally, and export verification posts for ZABAL, POIDH, or any community that asks for proof."
     />
-    <meta property="og:title" content="Proof Drop for ZABAL Gamez" />
+    <meta property="og:title" content="Proof Drop - Build Receipt Kit" />
     <meta
       property="og:description"
-      content="A small build receipt maker for July open build month."
+      content="A small receipt maker for shipped work, public links, proof photos, and verification posts."
     />
     <meta property="og:url" content="https://proof-drop-zabal.pages.dev" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://proof-drop-zabal.pages.dev/cover.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Proof Drop ZABAL Claim Kit cover showing Build, Proof, Cast, Claim, and Receipt." />
+    <meta property="og:image:alt" content="Proof Drop cover showing Build, Proof, Cast, Claim, and Receipt." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Proof Drop for ZABAL Gamez" />
+    <meta name="twitter:title" content="Proof Drop - Build Receipt Kit" />
     <meta
       name="twitter:description"
-      content="Create a timestamped receipt for your shipped ZABAL build."
+      content="Create a timestamped receipt for shipped work and export it wherever proof is requested."
     />
     <meta name="twitter:image" content="https://proof-drop-zabal.pages.dev/cover.png" />
     <meta
       name="fc:miniapp"
-      content='{"version":"1","name":"Proof Drop for ZABAL","homeUrl":"https://proof-drop-zabal.pages.dev","iconUrl":"https://proof-drop-zabal.pages.dev/icon.svg","imageUrl":"https://proof-drop-zabal.pages.dev/cover.png","buttonTitle":"Make a build receipt","splashImageUrl":"https://proof-drop-zabal.pages.dev/icon.svg","splashBackgroundColor":"#07111f"}'
+      content='{"version":"1","name":"Proof Drop","homeUrl":"https://proof-drop-zabal.pages.dev","iconUrl":"https://proof-drop-zabal.pages.dev/icon.svg","imageUrl":"https://proof-drop-zabal.pages.dev/cover.png","buttonTitle":"Make a build receipt","splashImageUrl":"https://proof-drop-zabal.pages.dev/icon.svg","splashBackgroundColor":"#07111f"}'
     />
     <meta
       name="fc:frame"
-      content='{"version":"next","imageUrl":"https://proof-drop-zabal.pages.dev/cover.png","button":{"title":"Make a build receipt","action":{"type":"launch_frame","name":"Proof Drop for ZABAL","url":"https://proof-drop-zabal.pages.dev","splashImageUrl":"https://proof-drop-zabal.pages.dev/icon.svg","iconUrl":"https://proof-drop-zabal.pages.dev/icon.svg","splashBackgroundColor":"#07111f"}}}'
+      content='{"version":"next","imageUrl":"https://proof-drop-zabal.pages.dev/cover.png","button":{"title":"Make a build receipt","action":{"type":"launch_frame","name":"Proof Drop","url":"https://proof-drop-zabal.pages.dev","splashImageUrl":"https://proof-drop-zabal.pages.dev/icon.svg","iconUrl":"https://proof-drop-zabal.pages.dev/icon.svg","splashBackgroundColor":"#07111f"}}}'
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -41,30 +41,30 @@
       <section class="hero" aria-labelledby="page-title">
         <div class="mark" aria-hidden="true">PD</div>
         <div>
-          <p class="system-line">ZABAL Gamez build receipt</p>
-          <h1 id="page-title">Proof Drop for ZABAL</h1>
+          <p class="system-line">Build receipt and verification kit</p>
+          <h1 id="page-title">Proof Drop</h1>
           <p class="lede">
-            Create a public build receipt, hash your POIDH proof photo locally, and leave with the exact claim kit.
+            Create a portable receipt for shipped work. This ZABAL template includes POIDH because that is how this bounty asks builders to verify.
           </p>
         </div>
       </section>
 
-      <section class="bar" aria-label="ZABAL claim bar">
+      <section class="bar" aria-label="Proof Drop verification flow">
         <article>
           <b>Public build</b>
           <span>Live app, frame, mini app, repo, video, mint page, or working demo.</span>
         </article>
         <article>
-          <b>Proof photo</b>
-          <span>You at your computer or phone with your build visible on the screen.</span>
+          <b>Proof evidence</b>
+          <span>Attach the photo or file your community asks for. Proof Drop hashes it locally.</span>
         </article>
         <article>
-          <b>Claim path</b>
-          <span>Tag @bettercallzaal on X, post in /zabal, then submit the POIDH claim.</span>
+          <b>Export path</b>
+          <span>Copy posts for X and Farcaster, then submit wherever proof is requested.</span>
         </article>
       </section>
 
-      <section class="composer" aria-label="Create ZABAL build receipt">
+      <section class="composer" aria-label="Create build receipt">
         <div>
           <span class="label">Track</span>
           <div class="track-grid" role="radiogroup" aria-label="Track">
@@ -86,28 +86,28 @@
         <div class="two">
           <label>
             <span>Build title</span>
-            <input id="buildTitle" value="Proof Drop for ZABAL Gamez" />
+            <input id="buildTitle" placeholder="My shipped build" />
           </label>
           <label>
             <span>Farcaster handle</span>
-            <input id="farcasterHandle" value="ghostmintops" />
+            <input id="farcasterHandle" placeholder="yourname" />
           </label>
         </div>
 
         <label>
           <span>Live build URL</span>
-          <input id="buildUrl" value="https://proof-drop-zabal.pages.dev" />
+          <input id="buildUrl" placeholder="https://your-live-build.example" />
         </label>
 
         <label>
           <span>Public repo URL</span>
-          <input id="repoUrl" value="https://github.com/BrandonDucar/proof-drop-zabal" />
+          <input id="repoUrl" placeholder="https://github.com/you/your-build" />
         </label>
 
         <div class="two">
           <label>
             <span>X handle</span>
-            <input id="xHandle" value="ghostmintops" />
+            <input id="xHandle" placeholder="yourname" />
           </label>
           <label>
             <span>Wallet address optional</span>
@@ -116,9 +116,9 @@
         </div>
 
         <label class="file-box">
-          <span>POIDH proof photo file</span>
+          <span>Proof photo or evidence file</span>
           <input id="proofPhoto" type="file" accept="image/*" />
-          <small id="photoStatus">Choose the photo you will submit to POIDH. The app hashes it locally and does not upload it.</small>
+          <small id="photoStatus">Choose the photo or image evidence you plan to submit or share. The app hashes it locally and does not upload it.</small>
         </label>
 
         <div class="actions">
@@ -153,13 +153,13 @@
             <textarea id="xPost" rows="5" readonly></textarea>
           </label>
           <label>
-            <span>Farcaster /zabal post</span>
+            <span>Farcaster post</span>
             <textarea id="farcasterPost" rows="5" readonly></textarea>
           </label>
         </div>
 
         <div class="links">
-          <a href="https://poidh.xyz/base/bounty/1249" target="_blank" rel="noreferrer">Open POIDH claim</a>
+          <a href="https://poidh.xyz/base/bounty/1249" target="_blank" rel="noreferrer">Open POIDH claim for ZABAL</a>
           <a href="https://farcaster.xyz/~/channel/zabal" target="_blank" rel="noreferrer">Open /zabal</a>
           <a href="https://zabalgamez.com" target="_blank" rel="noreferrer">ZABAL Gamez</a>
         </div>

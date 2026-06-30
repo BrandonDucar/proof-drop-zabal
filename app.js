@@ -50,24 +50,29 @@ function field(id) {
 }
 
 function buildPost(channel) {
-  const buildTitle = field('buildTitle') || 'Proof Drop for ZABAL Gamez';
-  const buildUrl = field('buildUrl') || 'https://proof-drop-zabal.pages.dev';
+  const buildTitle = field('buildTitle') || 'my shipped build';
+  const buildUrl = field('buildUrl') || '[add your public build URL]';
   const repoUrl = field('repoUrl');
   const hash = receipt?.receiptHash ? `sha256:${receipt.receiptHash}` : 'sha256:pending';
   const repoLine = repoUrl ? `Repo: ${repoUrl}\n` : '';
 
   if (channel === 'x') {
-    return `I shipped ${buildTitle} for ZABAL Gamez July open build month.\n\nBuild: ${buildUrl}\n${repoLine}Receipt: ${hash}\n\n@bettercallzaal`;
+    return `I shipped ${buildTitle} and made a Proof Drop receipt for ZABAL Gamez July open build month.\n\nBuild: ${buildUrl}\n${repoLine}Receipt: ${hash}\n\n@bettercallzaal`;
   }
 
-  return `I shipped ${buildTitle} for /zabal.\n\nBuild: ${buildUrl}\n${repoLine}Receipt: ${hash}\n\nPOIDH claim page: ${POIDH_URL}`;
+  return `I shipped ${buildTitle} and made a Proof Drop receipt for /zabal.\n\nBuild: ${buildUrl}\n${repoLine}Receipt: ${hash}\n\nZABAL POIDH claim page: ${POIDH_URL}`;
 }
 
 function buildPayload(createdAt = new Date().toISOString()) {
   return {
-    app: 'Proof Drop for ZABAL',
+    app: 'Proof Drop',
     schema: 'dreamnet.proofdrop.zabal_build_receipt.v1',
     createdAt,
+    purpose: {
+      primary: 'portable_build_receipt',
+      currentTemplate: 'zabal_gamez_poidh_claim',
+      note: 'POIDH is the current verification destination for ZABAL Gamez, not the only supported use case for Proof Drop.',
+    },
     event: {
       name: 'ZABAL Gamez Season 1',
       phase: 'July open build month',
@@ -78,21 +83,21 @@ function buildPayload(createdAt = new Date().toISOString()) {
       deadline: '2026-07-31T23:59:00-07:00',
     },
     builder: {
-      farcaster: cleanHandle(field('farcasterHandle'), 'ghostmintops'),
-      x: cleanHandle(field('xHandle'), 'ghostmintops'),
+      farcaster: cleanHandle(field('farcasterHandle'), '') || null,
+      x: cleanHandle(field('xHandle'), '') || null,
       wallet: field('walletAddress') || null,
     },
     build: {
       title: field('buildTitle') || 'Untitled ZABAL Gamez build',
       track: selectedTrack,
-      liveUrl: field('buildUrl') || 'https://proof-drop-zabal.pages.dev',
+      liveUrl: field('buildUrl') || null,
       repoUrl: field('repoUrl') || null,
     },
     proofPhoto: proofPhoto.sha256
       ? proofPhoto
       : {
           status: 'not_attached_yet',
-          instruction: 'Add the POIDH proof photo file to bind its SHA-256 into this receipt.',
+          instruction: 'Add the proof photo or evidence file to bind its SHA-256 into this receipt.',
         },
     checklist: {
       shippedLinkableBuild: Boolean(field('buildUrl')),
@@ -148,8 +153,8 @@ async function stampReceipt() {
     }),
   );
   $('status').textContent = proofPhoto.sha256
-    ? 'ZABAL claim kit stamped. Copy a post, open POIDH, and submit the proof photo.'
-    : 'Receipt stamped. Add the proof photo hash before the final POIDH claim.';
+    ? 'Proof Drop receipt stamped. Copy a post or submit it wherever verification is requested.'
+    : 'Receipt stamped. Add a proof photo hash before final submission if your community requires one.';
   renderReceipt();
 }
 
@@ -201,7 +206,7 @@ async function handlePhoto(event) {
     sha256: await sha256Bytes(await file.arrayBuffer()),
   };
   $('photoStatus').textContent = `${proofPhoto.fileName} hashed as sha256:${proofPhoto.sha256.slice(0, 16)}...${proofPhoto.sha256.slice(-8)}`;
-  $('status').textContent = 'Proof photo hashed locally. The image stays with you until you submit it on POIDH.';
+  $('status').textContent = 'Proof evidence hashed locally. The file stays with you until you submit or share it.';
   await stampReceipt();
 }
 
