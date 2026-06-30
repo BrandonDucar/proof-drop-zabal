@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Proof Drop for ZABAL preview card">
+  <defs>
+    <radialGradient id="c" cx="18%" cy="10%" r="45%">
+      <stop stop-color="#4eeeff" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#07111f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="m" cx="86%" cy="20%" r="40%">
+      <stop stop-color="#75ffb8" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#07111f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g" x1="110" x2="370" y1="145" y2="405" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffd36a"/>
+      <stop offset="0.52" stop-color="#4eeeff"/>
+      <stop offset="1" stop-color="#75ffb8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#07111f"/>
+  <rect width="1200" height="630" fill="url(#c)"/>
+  <rect width="1200" height="630" fill="url(#m)"/>
+  <rect x="72" y="72" width="1056" height="486" rx="36" fill="rgba(12,25,41,0.88)" stroke="rgba(142,236,255,0.35)" stroke-width="2"/>
+  <rect x="126" y="146" width="250" height="250" rx="60" fill="url(#g)"/>
+  <path d="M176 271c0-42 34-76 76-76s76 34 76 76-34 76-76 76" fill="none" stroke="#07111f" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="252" cy="271" r="16" fill="#07111f"/>
+  <text x="426" y="207" fill="#8fb2c8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="3">ZABAL GAMEZ BUILD RECEIPT</text>
+  <text x="426" y="295" fill="#eef8ff" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="900">Proof Drop</text>
+  <text x="426" y="371" fill="#eef8ff" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="900">for ZABAL</text>
+  <text x="426" y="434" fill="#d7f7ff" font-family="Inter, Arial, sans-serif" font-size="28">Hash your proof photo. Stamp the receipt. Submit the claim.</text>
+</svg>

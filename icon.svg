@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Proof Drop for ZABAL icon">
+  <defs>
+    <linearGradient id="g" x1="80" x2="432" y1="80" y2="432" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffd36a"/>
+      <stop offset="0.52" stop-color="#4eeeff"/>
+      <stop offset="1" stop-color="#75ffb8"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#07111f"/>
+  <rect x="80" y="80" width="352" height="352" rx="78" fill="url(#g)"/>
+  <path d="M151 256c0-58 47-105 105-105s105 47 105 105-47 105-105 105" fill="none" stroke="#07111f" stroke-width="34" stroke-linecap="round"/>
+  <path d="M256 197c33 0 59 26 59 59s-26 59-59 59-59-26-59-59" fill="none" stroke="#07111f" stroke-width="26" stroke-linecap="round"/>
+  <circle cx="256" cy="256" r="18" fill="#07111f"/>
+</svg>

@@ -1,0 +1,9 @@
+{
+  "name": "proof-drop-zabal",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "serve": "npx serve ."
+  }
+}
