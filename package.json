@@ -1,5 +1,6 @@
 {
   "name": "proof-drop-zabal",
+  "license": "SEE LICENSE IN LICENSE_SCOPE.md",
   "version": "0.1.0",
   "private": false,
   "type": "module",
