@@ -51,5 +51,12 @@ Do not interpret generated social copy as a post that has been sent.
 Useful improvements include accessibility, fixture-based verification tests, and
 explicitly versioned event templates. Preserve ZABAL attribution and separate
 generic receipt fields from event-specific requirements. Do not publish real
-wallet/customer data in fixtures. No general redistribution license is declared
-here; clarify licensing with the maintainer before reuse requiring permission.
+wallet/customer data in fixtures.
+
+## License
+
+DreamNet's original software additions and documentation are licensed under
+[Apache-2.0](LICENSE). See [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for the precise scope.
+ZABAL/ZAO event material, third-party code, and media retain their separate rights;
+this grant does not authorize copying those materials. Preserve the attribution in
+[NOTICE](NOTICE).
